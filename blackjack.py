@@ -1,5 +1,6 @@
 import random
 from Card import Card
+from Deck import Deck
 
 #variables
 suits = ('Heats', 'Diamonds', 'Spades', 'Clubs')
