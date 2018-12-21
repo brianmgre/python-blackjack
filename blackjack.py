@@ -42,6 +42,18 @@ def hit_or_stand(deck, hand):
             continue
         break
 
+def show_some(player, dealer):
+    print("\nDealer's hand:")
+    print("<card hidden>")
+    print('',dealer.cards[1])
+    print("\nPlayer's hand:", *player.cards, sep='\n')
+
+def show_all(player, dealer):
+    print("\nDealer's hand:", *dealer.cards, sep='\n')
+    print("Dealer's hand =",dealer.value)
+    print("\nPlayer's hand:", *player.cards, sep='\n')
+    print("Player's hand =",player.value)
+
 
 
 # test_deck = Deck()
