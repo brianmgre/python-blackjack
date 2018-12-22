@@ -54,17 +54,22 @@ def show_all(player, dealer):
     print("\nPlayer's hand:", *player.cards, sep='\n')
     print("Player's hand =",player.value)
 
+def player_busts(player,dealer,chips):
+    print('Player busts!')
+    chips.lose_bet()
 
+def player_wins(player,dealer,chips):
+    print('Player wins!')
+    chips.win_bet()
 
-# test_deck = Deck()
-# print(test_deck)
+def dealer_busts(player,dealer,chips):
+    print('Dealer busts!')
+    chips.win_bet()
 
-test_deck = Deck()
-test_deck.shuffle()
-test_player = Hand()
-test_player.add_card(test_deck.deal())
-test_player.add_card(test_deck.deal())
-test_player.value
+def dealer_wins(player,dealer,chips):
+    print('Dealer wins!')
+    chips.lose_bet()
 
-for card in test_player.cards:
-    print(card)
+def push(player, dealer):
+    print("Push, you tied")
+
